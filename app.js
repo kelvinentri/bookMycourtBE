@@ -27,19 +27,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 
-// app.use(cors()) // Use this after the variable declaration
+app.use(cors()) // Use this after the variable declaration
 // const corsOptions = {
 //   origin: ['https://bookmycourt-be1.onrender.com/', 'http://localhost:5000'],
 //   credentials: true,
 //   optionSuccessStatus: 200,
 // };
-const corsOptions = {
-  origin: ['https://bookmycourt-fe.onrender.com', 'http://localhost:3000'],
-  credentials: true,
-  optionSuccessStatus: 200,
-};
 
-app.use(cors(corsOptions));
 
 // app.use(cors(corsOptions));
 app.use(logger('dev'));
