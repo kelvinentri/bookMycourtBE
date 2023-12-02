@@ -34,7 +34,7 @@ app.set('view engine', 'jade');
 //   optionSuccessStatus: 200,
 // };
 const corsOptions = {
-  origin: ['https://bookmycourt-be1.onrender.com', 'http://localhost:3000'],
+  origin: ['https://bookmycourt-fe.onrender.com', 'http://localhost:3000'],
   credentials: true,
   optionSuccessStatus: 200,
 };
