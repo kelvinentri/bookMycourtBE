@@ -26,12 +26,12 @@ connectDb()
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use((_req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', '*');
+// app.use((_req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', '*');
 
-  next();
-});
+//   next();
+// });
 
 app.use(cors()) // Use this after the variable declaration
 // const corsOptions = {
