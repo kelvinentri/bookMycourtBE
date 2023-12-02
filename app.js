@@ -27,13 +27,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 
-// app.use(cors()) // Use this after the variable declaration
+app.use(cors()) // Use this after the variable declaration
 // const corsOptions ={
 //    origin:'*', 
 //    credentials:true,            //access-control-allow-credentials:true
 //    optionSuccessStatus:200,
 // }
-app.options('*', cors()); 
+// app.options('*', cors()); 
 
 app.use(cors(corsOptions))
 app.use(logger('dev'));
