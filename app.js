@@ -28,14 +28,20 @@ app.set('view engine', 'jade');
 
 
 // app.use(cors()) // Use this after the variable declaration
-const corsOptions ={
-   origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
-}
-// app.options('*', cors()); 
+// const corsOptions = {
+//   origin: ['https://bookmycourt-be1.onrender.com/', 'http://localhost:5000'],
+//   credentials: true,
+//   optionSuccessStatus: 200,
+// };
+const corsOptions = {
+  origin: ['https://bookmycourt-be1.onrender.com', 'http://localhost:3000'],
+  credentials: true,
+  optionSuccessStatus: 200,
+};
 
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
+
+// app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
