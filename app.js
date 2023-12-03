@@ -6,6 +6,7 @@ var logger = require('morgan');
 const connectDb=require('./config/db')
 const cors = require('cors')
 // require('dotenv').config // 
+var app = express();
 
 const dotenv = require('dotenv').config();;
 if (dotenv.error) {
@@ -38,9 +39,6 @@ var usersRouter = require('./routes/users');
 const authRouter =require('./routes/authRouter');
 const adminRoute =require('./routes/adminRoute');
 const paymentRoute =require('./routes/paymentRoute');
-
-var app = express();
-
 connectDb()
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
