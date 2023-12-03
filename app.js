@@ -6,27 +6,11 @@ var logger = require('morgan');
 const connectDb=require('./config/db')
 const cors = require('cors')
 // require('dotenv').config // 
+
 const dotenv = require('dotenv').config();;
 if (dotenv.error) {
   throw dotenv.error;
 }
-console.log(process.env.JWT_PASSWORD);
-
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');   
-const authRouter =require('./routes/authRouter');
-const adminRoute =require('./routes/adminRoute');
-const paymentRoute =require('./routes/paymentRoute');
-
-var app = express();
-
-connectDb()
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
-
 // app.use(cors()) // Use this after the variable declaration
 const corsOptions = {
   origin: 'https://runsports.onrender.com',
@@ -48,6 +32,20 @@ app.use((req, res, next) => {
 
   next();
 })
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');   
+const authRouter =require('./routes/authRouter');
+const adminRoute =require('./routes/adminRoute');
+const paymentRoute =require('./routes/paymentRoute');
+
+var app = express();
+
+connectDb()
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
