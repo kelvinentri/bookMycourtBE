@@ -33,7 +33,7 @@ app.set('view engine', 'jade');
 //   next();
 // });
 
-app.use(cors({ origin: ['https://runsports.onrender.com', 'http://localhost:3000'],})) // Use this after the variable declaration
+app.use(cors()) // Use this after the variable declaration
 // const corsOptions = {
 //   origin: ['https://bookmycourt-fe.onrender.com', 'http://localhost:3000'],
 //   credentials: true,
