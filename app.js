@@ -28,14 +28,19 @@ app.set('view engine', 'jade');
 
 
 // app.use(cors()) // Use this after the variable declaration
-const corsOptions = {
-  origin: '*',
-  credentials: true,
-  optionSuccessStatus: 200,
-};
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://runsports.onrender.com');
+  res.header('Access-Control-Allow-Credentials', true);
+  // Add other necessary headers...
 
+  if (req.method === 'OPTIONS') {
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    return res.status(200).json({});
+  }
 
-app.use(cors(corsOptions));
+  next();
+})
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
