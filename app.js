@@ -10,7 +10,8 @@ var app = express();
 
 const dotenv = require('dotenv').config();;
 if (dotenv.error) {
-  throw dotenv.error;
+  throw dotenv.error;   
+  
 }
 // app.use(cors()) // Use this after the variable declaration
 const corsOptions = {
