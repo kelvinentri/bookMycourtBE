@@ -24,7 +24,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://book-mycourt-fe.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'https://book-mycourt-fe-k2l7.vercel.app');
   res.header('Access-Control-Allow-Credentials', true);
   // Add other necessary headers...
 
