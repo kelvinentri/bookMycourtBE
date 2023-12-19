@@ -17,14 +17,14 @@ if (dotenv.error) {
 }
 // app.use(cors()) // Use this after the variable declaration
 const corsOptions = {
-  origin: ['https://book-mycourt-fe.vercel.app','https://book-mycourt-fe-k2l7.vercel.app'],
+  origin: ['https://book-mycourt-fe.vercel.app','https://book-mycourt-fe-k2l7-d4843mng6-kelvins-projects-6d21db80.vercel.app'],
   credentials: true,
   optionSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://book-mycourt-fe.vercel.app','https://book-mycourt-fe-k2l7.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'https://book-mycourt-fe.vercel.app','https://book-mycourt-fe-k2l7-d4843mng6-kelvins-projects-6d21db80.vercel.app');
   res.header('Access-Control-Allow-Credentials', true);
   // Add other necessary headers...
 
