@@ -7,8 +7,6 @@ const connectDb=require('./config/db')
 const cors = require('cors')
 // require('dotenv').config // 
 var app = express();
-const cl=console.log.bind(console)
-cl('ai')
 
 const dotenv = require('dotenv').config();;
 if (dotenv.error) {
@@ -23,19 +21,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin','https://book-mycourt-fe.vercel.app/');
-  res.header('Access-Control-Allow-Credentials', true);
-  // Add other necessary headers...
-
-  if (req.method === 'OPTIONS') {
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    return res.status(200).json({});
-  }
-
-  next();
-})
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');   
