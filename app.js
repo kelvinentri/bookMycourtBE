@@ -15,9 +15,9 @@ if (dotenv.error) {
   throw dotenv.error;   
   
 }
-// app.use(cors()) // Use this after the variable declaration
+
 const corsOptions = {
-  origin: 'https://book-mycourt-fe.vercel.app',
+  origin: ['https://book-mycourt-fe.vercel.app','https://book-mycourt-fe-k2l7.vercel.app'],
   credentials: true,
   optionSuccessStatus: 200,
 };
