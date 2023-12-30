@@ -1,5 +1,4 @@
 const mongoose=require('mongoose')
-
 const userShema=mongoose.Schema({
 fname:{
     type:String,
@@ -26,7 +25,5 @@ role:{
 //user-3
 //admin -1
 })
-
-
 const users=mongoose.model('users',userShema)
 module.exports=users
