@@ -14,7 +14,7 @@ if (dotenv.error) {
   
 }
 app.use(cors({
-  origin:['https://bookmycourt-app.onrender.com','http://localhost:3000']
+  origin:['https://bookmycourt-app.onrender.com','http://localhost:3000'],
 })) 
 
 
