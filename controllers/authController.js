@@ -12,7 +12,6 @@ const doSignUp=async (req,res)=>{
     return
   }
     
-    console.log(req.body); 
     bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
 console.log(hash);
 USERS({
